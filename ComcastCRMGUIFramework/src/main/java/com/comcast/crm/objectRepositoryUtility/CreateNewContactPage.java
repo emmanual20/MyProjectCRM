@@ -3,6 +3,7 @@ package com.comcast.crm.objectRepositoryUtility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -32,7 +33,7 @@ public class CreateNewContactPage {
 	@FindBy(name="search")
 	private WebElement searchBtn;
 	
-	@FindBy(xpath="//a[text()='Organization Name ']/ancestor::tbody/tr/td/a[@id='1']")
+	@FindAll({@FindBy(xpath="//a[text()='Organization Name ']/ancestor::tbody/tr/td/a[@id='1']"),@FindBy(xpath="//a[@id=\"1\"]")})
 	private WebElement selectOrg;
 	
 	//Step- 3 Object Initialization
